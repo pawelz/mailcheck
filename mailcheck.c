@@ -16,7 +16,7 @@ int count_files(char *path) {
   struct dirent *entry;
   dirp = opendir(path);
   if (dirp == NULL) {
-    fprintf(stderr, "Cannot open directry '%s': %s", path, strerror(errno));
+    fprintf(stderr, "Cannot open directory '%s': %s", path, strerror(errno));
     exit(1);
   }
   while ((entry = readdir(dirp)) != NULL) {
